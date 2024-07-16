@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import './MovieRow.css';
+import '../components/MovieRow.css';
 
 const MovieRow = ({ movies }) => {
   const rowRef = useRef(null);
@@ -20,7 +20,7 @@ const MovieRow = ({ movies }) => {
           <div key={movie.id} className="movie">
             <img src={movie.medium_cover_image} alt={movie.title} className="movie-poster" />
             <h3 className="movie-title">{movie.title}</h3>
-            <Link to={`/movie/${movie.id}`} className="view-details-button">View Details</Link>
+            <Link to={`#/movie/${movie.id}`} className="view-details-button">View Details</Link>
           </div>
         ))}
       </div>
